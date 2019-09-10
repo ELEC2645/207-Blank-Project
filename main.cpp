@@ -13,21 +13,18 @@ Date: XX/XX/XXXX
 #include "Gamepad.h"
 #include "N5110.h"
 #include "stdio.h"
-#include "music.h"
-#include "soundData.h"
-#include <queue>
+
 
 // objects
 Gamepad pad;
 N5110 lcd;
-Music music;
+
 
 int main()
 {
     // Initalise objects
     lcd.init();
     pad.init();
-    music.init(sound_data,NUM_ELEMENTS);
    
    // Main loop
     while (1) {
