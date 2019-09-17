@@ -307,13 +307,13 @@ Vector2D Gamepad::get_coord()
     float x = 2.0f*( _horiz->read() - _x0 );
     float y = 2.0f*( _vert->read()  - _y0 );
 
-    // Note: the x value here is inverted to ensure the positive x is to the
-    // right. This is simply due to how the potentiometer on the joystick
+    // Note: the x and y value here is inverted to ensure the positive x is to the
+    // right and positive y is up. This is simply due to how the potentiometer on the joystick
     // I was using was connected up. It could have been corrected in hardware
     // by swapping the power supply pins. Instead it is done in software so may
     // need to be changed depending on your wiring setup
 
-    Vector2D coord = {-x,y};
+    Vector2D coord = {-x,-y};
     return coord;
 }
 
