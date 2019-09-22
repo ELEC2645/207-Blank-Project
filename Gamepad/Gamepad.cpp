@@ -313,7 +313,7 @@ Vector2D Gamepad::get_coord()
     // by swapping the power supply pins. Instead it is done in software so may
     // need to be changed depending on your wiring setup
 
-    Vector2D coord = {-x,-y};
+    Vector2D coord = {x,-y};
     return coord;
 }
 
